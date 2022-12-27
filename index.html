@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- form -->
+    <div class="contanier my-3">
+        <!-- <form class="needs-validation"" novalidate> -->
+            <div class="row">
+                <div class="col-12 w-50 m-auto">
+                    <div class="my-4">
+                        <label class="form-label" for="product-Name">Name:</label>
+                        <input id="product-Name" class="form-control" type="text">
+                        <!-- <div class="alert alert-danger mt-2">wrong desc</div> -->
+                    </div>
+
+                    <div class="my-4">
+                        <label class="form-label" for="product-Price">Price:</label>
+                        <input id="product-Price" class="form-control" type="number">
+                    </div>
+
+                    <div class="my-4">
+                        <label class="form-label" for="product-Category">Category:</label>
+                        <input id="product-Category" class="form-control" type="text">
+                    </div>
+
+                    <div class="my-4">
+                        <label class="form-label" for="product-Desc">Description</label>
+                        <input id="product-Desc" class="form-control" type="text">
+                    </div>
+
+                    <button id="btn" onclick="addNewProduct()" class="btn btn-lg btn-primary">Add New Product</button>
+
+                    <input onkeyup="searchItem(this.value)" onfocusout="clearSearchInput(this)" type="search"
+                        class="form-control my-4">
+                </div>
+            </div>
+        <!-- </form> -->
+        <!-- form -->
+        <!-- ////// -->
+        <!-- Table -->
+        <div class="row">
+            <div class="col-12 w-50 m-auto mt-4">
+                <table class="table">
+                    <thead class="text-center">
+                        <tr>
+                            <th>Index</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center" id="show-tr">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Table -->
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
